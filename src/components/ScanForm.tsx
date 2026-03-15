@@ -37,7 +37,7 @@ export function ScanForm({
         </div>
         <div>
           <p className="text-sm font-semibold text-gray-900 dark:text-white leading-tight">
-            WebGuard
+            WebScan
           </p>
           <p className="text-[11px] text-gray-400">
             Detect vulnerabilities instantly
@@ -57,7 +57,7 @@ export function ScanForm({
             Scan any website for risks
           </h2>
           <p className="text-sm text-gray-400 dark:text-gray-500 leading-relaxed">
-            WebGuard runs security checks including headers, XSS, SQL injection,
+            WebScan runs security checks including headers, XSS, SQL injection,
             exposed endpoints, and suspicious scripts — giving you a full
             picture in seconds.
           </p>
