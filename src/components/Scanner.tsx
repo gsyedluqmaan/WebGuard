@@ -53,14 +53,19 @@ export default function Scanner() {
 
     if (!abortRef.current) {
       // ── Replace with your real API call ──────────────────────────────────
-      // try {
-      //   const res = await fetch("http://localhost:5000/api/scan", {
-      //     method: "POST",
-      //     headers: { "Content-Type": "application/json" },
-      //     body: JSON.stringify({ url, mode: scanMode }),
-      //   });
-      //   setResult(await res.json());
-      // } catch { alert("Scan failed"); }
+      try {
+        const res = await fetch(
+          "https://webguard-backend.onrender.com/api/scan",
+          {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ url, mode: scanMode }),
+          },
+        );
+        setResult(await res.json());
+      } catch {
+        alert("Scan failed");
+      }
       //
       setResult(MOCK_RESULTS[scanMode]);
       setPhase("done");
